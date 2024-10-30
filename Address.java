@@ -11,6 +11,7 @@ public class Address {
         this.stateName=stateName;
 
     }
+
     public void setCityName(String cityName){
         this.cityName=cityName;
     }

@@ -5,28 +5,28 @@ public class Seats {
     private String seatId;
     private SeatType seatType;
     private SeatStatus seatStatus;
-    private List<String> seatList;
+    private int price;
 
-    public Seats(String seatId){
+
+    public Seats(String seatId,int price){
         this.seatId=seatId;
-        this.seatList= new ArrayList<>();
+        this.price=price;
+
     }
 
-    public boolean bookSeats(String seatId){
-        if(!seatList.contains(seatId)){
-            seatList.add(seatId);
-            return true;
-        } else {
-            System.out.println("Seat is already booked");
-        }
-        return false;
+    public SeatStatus getSeatStatus() {
+        return seatStatus;
     }
 
+    public SeatType getSeatType() {
+        return seatType;
+    }
 
+    public String getSeatId() {
+        return seatId;
+    }
 
-
-
-
-
-
+    public void setSeatId(String seatId) {
+        this.seatId = seatId;
+    }
 }

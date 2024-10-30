@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.util.List;
 
 public class Show {
     private  String showId;
@@ -6,11 +7,21 @@ public class Show {
     private Date endTime;
     private ShowName showName;
     private Screen screen;
+    private Movie movie;
+    private List<Seats> seatsList;
 
     public Show(String showId,Date startTime,Date endTime){
         this.showId=showId;
         this.startTime=startTime;
         this.endTime=endTime;
+    }
+
+    public List<Seats> getSeatsList() {
+        return seatsList;
+    }
+
+    public String getMovieName(){
+        return movie.getMovieName();
     }
 
     public Date getEndTime() {

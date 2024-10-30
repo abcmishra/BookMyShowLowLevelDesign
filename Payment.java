@@ -5,15 +5,18 @@ public class Payment{
     private PaymentStatus paymentStatus;
     private int totalAmt;
     private PaymentStrategy paymentStrategy;
-    private Ticket ticket;
-    Map<Booking,>
 
     public Payment(String paymentId,int totalAmt){
         this.paymentId=paymentId;
         this.totalAmt=totalAmt;
     }
 
-   public boolean isPaymentDone()
+   public boolean isPaymentDone(){
+        if(PaymentStatus.SuCCESSFUL==paymentStatus)
+            return true;
+        return false;
+   }
+
 
 
 
